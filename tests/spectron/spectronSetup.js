@@ -31,7 +31,7 @@ class App {
             await Utils.killProcess("electron.exe");
             await Utils.killProcess("chromedriver.exe");
             this.app = await this.app.start();
-            await this.app.client.waitForVisible(ui.SYM_LOGO, constants.TIMEOUT_PAGE_LOAD);
+            //await this.app.client.waitForVisible(ui.SYM_LOGO, constants.TIMEOUT_PAGE_LOAD);
             if (configurations) {
                 if (typeof configurations.alwaysOnTop !== "undefined") {
                     await this.app.browserWindow.setAlwaysOnTop(configurations.alwaysOnTop);
